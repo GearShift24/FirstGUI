@@ -17,15 +17,14 @@ public class PopupController
 	
 	public void start()
 	{
-		int count = 0;
-		while(count < 10)
+		String answer = "sample";
+		while(answer != null && !answer.equals(""))
 		{
 			display.displayMessage("Hi there :D");
 			
-			String answer = display.collectResponse("What is going on?");
+			answer = display.collectResponse("What is going on?");
 			display.displayMessage(answer + " is what you said.");
 			
-			count++;
 		}
 	}
 }
