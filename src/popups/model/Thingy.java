@@ -8,11 +8,7 @@ public class Thingy
 	private String words;
 	private boolean isValid;
 	
-
 	//no constructor
-	
-	
-
 	//getters and setters here
 	
 	public int getnumber()
@@ -35,7 +31,7 @@ public class Thingy
 	}
 
 	
-	public void setNumber(int number)
+	public void setnumber(int number)
 	{
 		this.number = number;
 	}
