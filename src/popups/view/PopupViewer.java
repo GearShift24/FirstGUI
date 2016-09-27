@@ -2,6 +2,12 @@ package popups.view;
 
 import javax.swing.JOptionPane;
 
+
+/**
+ * A Popup Viewer class.
+ * @author Joe Wrigley
+ *@version 0.0 September 27, 2016.
+ */
 public class PopupViewer
 {
 	
@@ -27,4 +33,21 @@ public class PopupViewer
 			
 			return response;
 		}
+		
+		/**
+		 * Creates a popup window to ask a yes/no/cancel type question.
+		 * @param question The question being asked to the user
+		 * @return The constant value from JOptionPane for y/n/c
+		 */
+		
+		public int collectUserOption(String question)
+		{
+			int response = 0;
+			
+			response = JOptionPane.showConfirmDialog(null, question);
+			//showConfirm gives us a yes, no, or cancel aka nothing.
+			
+			return response;
+		}
+		
 }
