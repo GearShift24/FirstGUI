@@ -27,4 +27,26 @@ public class PopupController
 			
 		}
 	}
+	
+	/**
+	 * checks if the supplied user String can be parsed to a double value	
+	 * @param potentialValue The string to test
+	 * @return whether the value could be parsed. True if it can be parsed, false otherwise.
+	 */
+	private boolean isDouble(String potentialValue)
+	{
+		boolean isParseable = false; //make default value not parseable/true
+				
+		try
+		{
+			double test = Double.parseDouble(potentialValue);
+			isParseable = true; //if try doesnt break it goes here
+		}
+		catch(NumberFormatException notDouble) //if try breaks goes here
+		{
+			display.displayMessage("This is not a double value :(");
+		}
+		
+		return isParseable;
+	}
 }
