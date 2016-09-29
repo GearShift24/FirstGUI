@@ -49,4 +49,20 @@ public class PopupController
 		
 		return isParseable;
 	}
+	
+	private boolean isInteger(String potentialNumber)
+	{
+		boolean isParseable = false;
+		
+		{
+			int test = Integer.parseInt(potentialNumber);
+			isParseable = true;
+		}
+		catch(NumberFormatException notInt)
+		{
+			display.displayMessage(notInt.getMessage()); //this will show the error message java gives us.
+			display.displayMessage("Type in an intert next time!");
+		}
+		return isParseable;
+	}
 }
