@@ -18,12 +18,9 @@ public class PopupController
 	public void start()
 	{
 		String answer = "sample";
-		while(answer != null && !answer.equals(""))
+		while(answer != null && !isDouble(answer))
 		{
-			display.displayMessage("Hi there :D");
-			
-			answer = display.collectResponse("What is going on?");
-			display.displayMessage(answer + " is what you said.");
+			answer = display.collectResponse("You need to type in a number!!!!");
 			
 		}
 	}
@@ -35,12 +32,12 @@ public class PopupController
 	 */
 	private boolean isDouble(String potentialValue)
 	{
-		boolean isParseable = false; //make default value not parseable/true
+		boolean isParseable = false; //make default value not parse able/true
 				
 		try
 		{
 			double test = Double.parseDouble(potentialValue);
-			isParseable = true; //if try doesnt break it goes here
+			isParseable = true; //if try doesn't break it goes here
 		}
 		catch(NumberFormatException notDouble) //if try breaks goes here
 		{
@@ -54,6 +51,7 @@ public class PopupController
 	{
 		boolean isParseable = false;
 		
+		try
 		{
 			int test = Integer.parseInt(potentialNumber);
 			isParseable = true;
@@ -66,3 +64,13 @@ public class PopupController
 		return isParseable;
 	}
 }
+
+
+
+
+
+
+
+
+
+
