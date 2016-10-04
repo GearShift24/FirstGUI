@@ -79,6 +79,45 @@ public class PopupController
 		Thingy testThingy = new Thingy();
 		thingyList.add(testThingy);
 		display.displayMessage(thingyList.size() + " is the size of the list.");
+		
+		for (int index = 0; index <5; index ++)
+		{
+			Thingy addThingy = new Thingy();
+			thingyList.add(addThingy);
+			display.displayMessage(addThingy.getwords());
+	
+		}
+	
+		display.displayMessage(thingyList.size() + " is the size.");
+	
+		
+		thingyList.get(3).setwords("look I changed a value");
+		
+		Thingy temp = thingyList.get(4);
+		temp.setwords("stuff");	
+		
+		for ( int index =0; index <thingyList.size(); index++)
+		{
+			display.displayMessage(thingyList.get(index).getwords());
+		}
+		
+		thingyList.add(3, new Thingy());
+		
+		display.displayMessage("The size is: " + thingyList.size());
+		
+		thingyList.remove(0); // i no longer have access to this object because there is no = sign
+		
+		display.displayMessage("The size is " + thingyList.size());
+		
+		Thingy deletedThingy = thingyList.remove(0);
+		display.displayMessage(deletedThingy.getwords() + "and the list size is " + thingyList.size());
+		
+		thingyList.set(0, deletedThingy);
+		
+		for(int index = 0; index < thingyList.size(); index++)
+		{
+			display.displayMessage(thingyList.get(index).getwords());
+		}
 	}
 }
 
