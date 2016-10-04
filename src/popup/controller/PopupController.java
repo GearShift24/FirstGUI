@@ -118,6 +118,34 @@ public class PopupController
 		{
 			display.displayMessage(thingyList.get(index).getwords());
 		}
+		
+		
+		for (Thingy currentThingy : thingyList)
+		{
+			display.displayMessage(currentThingy.getwords());
+			
+		}
+		
+		//trying stuff for 25 minutes
+		
+		display.displayMessage("ok lets try something. Imma remove the 2nd thing and output the third number");
+		thingyList.remove(1);
+		
+		display.displayMessage(" when removing the fifth number, the third number is still: " + thingyList.get(3));
+		
+		
+		for(int index = 0; index < 20; index ++)
+		{
+			thingyList.add(new Thingy());
+		   display.displayMessage("were adding 20 more thingies, currently we are at " + thingyList.size() + " thingies!");
+		}
+		
+		
+		display.displayMessage("the 14th Thingy is called: " + thingyList.get(14));
+		
+		
+		
+		
 	}
 }
 
