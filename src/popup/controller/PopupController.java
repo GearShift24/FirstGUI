@@ -9,6 +9,7 @@ public class PopupController
 {
 	private PopupViewer display;
 	private List<Thingy> thingyList;
+	private boolean dogHasLegs;
 	public PopupController()
 	{
 		display = new PopupViewer();
@@ -142,6 +143,32 @@ public class PopupController
 		
 		
 		display.displayMessage("the 14th Thingy is called: " + thingyList.get(14));
+		
+		
+		
+	
+		
+			for(double dogLegs = 4.0; dogLegs > 0.0; dogLegs--)
+			{
+				display.displayMessage("the dog has " + dogLegs + " legs!");
+				if(dogLegs == 0.0)
+				{
+					dogHasLegs = true;
+				}
+				else{ 
+					dogHasLegs = false;
+				}
+				
+					while(dogHasLegs = false)
+					{
+					System.out.println("lets chop off one of those legs");
+					dogLegs--;
+					}
+					
+			}
+			
+			
+		
 		
 		
 		
